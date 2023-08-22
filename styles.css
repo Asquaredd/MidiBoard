@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(2.0); /* Adjust as needed */
+    padding-top: 100px;
+
+}
+
+.matrix-container {
+    display: flex;
+}
+
+.dials {
+    display: flex;
+    flex-direction: column; /* Makes the dials align vertically */
+    gap: 10px; /* Adds spacing between the dials */
+}
+
+.dial {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    background: lightgray;
+    overflow: hidden;
+}
+
+.dial:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background: black;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -50%) rotate(var(--rotation, 0deg));
+}
+
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#button {
+    width: 50px;
+    height: 50px;
+}
+
+.sound-kit {
+    margin-bottom: 20px;
+}
